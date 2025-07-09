@@ -1,0 +1,150 @@
+/* Header_user_platform.css */
+
+/* At the very top of your CSS file */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main-header {
+    background-color: #afd69b;; /* Your requested color */
+    padding: 20px 0 15PX 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    min-height: 70px;
+}
+
+.main-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 90%; /*Change from 100% to 96%*/
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* No specific height needed here if the text is determining height, or set based on your desire */
+}
+
+.text-logo {
+    /* Styles for the "GAMBLE" text */
+    font-family: 'Dancing Script', cursive;/* Apply the beautiful font */
+    font-size: 32px; /* Adjust size as needed */
+    font-weight: 400; /* Bold weight */
+    color: #36454F; /* A dark charcoal grey for good contrast */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Optional: subtle shadow for depth */
+    white-space: nowrap; /* Prevent "GAMBLE" from wrapping */
+}
+
+
+.Search_bar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 5px 15px;
+    flex-grow: 1;
+    max-width: 400px;
+    margin: 0 20px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #333;
+    padding: 5px 0;
+    width: 100%;
+}
+
+.search-input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.search-icon {
+    color: #333;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.categories ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.categories ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 17.5px; /* Your current size */
+    font-weight: 500;
+    position: relative; /* Needed for the underline effect */
+    padding-bottom: 5px; /* Space for the underline */
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and transform */
+}
+
+.categories ul li a:hover {
+    color: #484e52; /* Darker text color on hover */
+    transform: translateY(-2px); /* Lifts the text slightly up */
+}
+
+.categories ul li a:active {
+    color: #666; /* Slightly lighter/different color when clicked (active state) */
+    transform: translateY(0); /* Returns to original position on click */
+}
+
+/* Special Underline Effect on Hover */
+.categories ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0; /* Starts with no width */
+    height: 2px; /* Thickness of the underline */
+    background-color: #36454F; /* Color of the underline (e.g., matching GAMBLE text) */
+    left: 50%; /* Start from the center */
+    bottom: 0;
+    transform: translateX(-50%); /* Pull back to center */
+    transition: width 0.3s ease-out; /* Smooth transition for width */
+}
+
+.categories ul li a:hover::after {
+    width: 100%; /* Expands to full width on hover */
+}
+
+/* Common button styles */
+.login-button,
+.register-button {
+    background-color: #2E8B57;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.login-button {
+    margin-left: 20px;
+}
+
+.register-button {
+    margin-left: 10px;
+}
+
+.login-button:hover,
+.register-button:hover {
+    background-color: #226644; /* Darker shade on hover */
+    transform: translateY(-1px);
+}
